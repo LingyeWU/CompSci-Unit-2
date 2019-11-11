@@ -2,9 +2,7 @@ Nov.11th
 =========
 Comparing BASH to C
 
- || BASH | C
+--- | BASH | C
 --- | --- | ---
-Speed | Slower | Faster
-First released | 1989 | 1972|
-Functionality | Bash is a command processor that typically runs in a text window where the user types commands that cause actions. | C is a general-purpose, procedural computer programming language supporting structured programming, lexical variable scope, and recursion, while a static type system prevents unintended operations.
-Features | Bash supports brace expansion, command line completion, basic debugging | C is an imperative procedural language. It was designed to be compiled using a relatively straightforward compiler to provide low-level access to memory and language constructs that map efficiently to machine instructions, all with minimal runtime support. 
+PROS | 1. Easy to learn and don't need ";" 2. already installed; 3. powerful with administrative tasks; 4. handy IT admin  | 1. Editing tools(IDE); 2. "Window"; 3. Users can develope their own electronic kit; 4. extremely powerful; simple syntax.
+CONS | 1. syntax is unforgiving; 2. limited to terminal; 3. not a lot of resources on internet | 1. usage of additional programs to check your scripts; 2. too many unnecessary syntax
