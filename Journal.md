@@ -6,3 +6,25 @@ Comparing BASH to C
 --- | --- | ---
 PROS | 1. Easy to learn and don't need ";" 2. already installed; 3. powerful with administrative tasks; 4. handy IT admin  | 1. Editing tools(IDE); 2. "Window"; 3. Users can develope their own electronic kit; 4. extremely powerful; simple syntax.
 CONS | 1. syntax is unforgiving; 2. limited to terminal; 3. not a lot of resources on internet | 1. usage of additional programs to check your scripts; 2. too many unnecessary syntax
+
+Nov.12th
+========
+What is the meaning of void in a function?
+1. Void as a Function Return Type
+1. Void as a Function Parameter
+1. Void as a Pointer Declaration
+
+Variebles in C:
+
+| Sr.No | Type&Description |
+| --- | --- |
+1 | _char_: Typically a single octet(one byte). This is an integer type.
+2 | _int_: The most natural size of integer for the machine.
+3 | _float_: A single-precision floating point value.
+4 | _double_: A double-precision floating point value.
+5 | _void_: Represents the absence of type.
+6 | _byte_: A byte stores an 8-bit unsigned number, from 0 to 255.
+7 | _unsigned int_: unsigned ints (unsigned integers) are the same as ints in that they store a 2 byte value. Instead of storing negative numbers however they only store positive values, yielding a useful range of 0 to 65,535 ((2^16) - 1).
+8 | _long_: Long variables are extended size variables for number storage, and store 32 bits (4 bytes), from -2,147,483,648 to 2,147,483,647.
+9 | _unsigned long_: Unsigned long variables are extended size variables for number storage, and store 32 bits (4 bytes). Unlike standard longs unsigned longs won’t store negative numbers, making their range from 0 to 4,294,967,295 (2^32 - 1).
+10 | _string_: Text strings can be represented in two ways. you can use the String data type, which is part of the core as of version 0019, or you can make a string out of an array of type char and null-terminate it.
