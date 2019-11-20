@@ -66,11 +66,144 @@ Nov.6th
 
 ### 1. Consider the case of a challenged person who cannot operate a keyboard or a mouse. 
 What options could we provide to allow this person interact with the computer?
-![Diagram](2 button challenge.jpg)
+![Diagram](2button.jpg)
+**Fig.1** The two ways proposed by Rikio and Uzay. Uzay's idea is based on a static alphabet where one button is used for the "next letter" and the other one "OK" for inputting the letter, with one drawback of not able to make any mistakes while typing; while Rikio's idea is based on the alphabet looping itself automaticly, therefore having the functionality of input (button"OK") and delete(button"DEL").
 
-### 2. 
+**my idea:**
 
+To put multiple functionalities on the buttons, therefore making one of the buttons "func", and the other "delete". That is, to always have the alphabet displayed to users as a table(i.e 5 times 6), meantime giving the the "func" button functionalities such as "one press to the right""two press to the left""long press go down", along with the other botton with the delete fuction.
 
+### 2. Create a traffic light using Arduino
+![Diagram](trafficlight.png)
+
+_code for traffic light:_
+```c,.h
+ int red = 10;
+ int yellow = 9;
+ int green = 8;
+
+void setup()
+{
+  pinMode(red, OUTPUT);
+  pinMode(yellow, OUTPUT);
+  pinMode(green, OUTPUT);
+  digital.write(green, HIGH);
+}
+
+void loop()
+{
+  changeLights();
+    delay(15000);
+}
+
+void changeLights(){
+    // green off, yellow on for 3 seconds
+    digitalWrite(green, LOW);
+    digitalWrite(yellow, HIGH);
+    delay(3000);
+
+    // turn off yellow, then turn red on for 5 seconds
+    digitalWrite(yellow, LOW);
+    digitalWrite(red, HIGH);
+    delay(5000);
+
+    // red and yellow on for 2 seconds (red is already on though)
+    digitalWrite(yellow, HIGH);
+    delay(2000);
+
+    // turn off red and yellow, then turn on green
+    digitalWrite(yellow, LOW);
+    digitalWrite(red, LOW);
+    digitalWrite(green, HIGH);
+    delay(3000);
+}
+```
+
+__demonstration:__ 
+![Diagram](trafficlight.gif)
+
+**_Problem(fixed): how do variables and 'void' work in arduino_**
+
+Sol to the first problem:
+
+![Diagram](variables.jpg)
+
+**void**: The void keyword is used only in function declarations. It indicates that the function is expected to return no information to the function from which it was called.
+
+_reference:_ “Void.” Arduino Reference, https://www.arduino.cc/reference/tr/language/variables/data-types/void/.
+
+### 3. Converting decimals to binary, shown by LED lights
+
+_This code shows how to convert decimals to binary (up to 4 binary digits), shown by 4 LED lights, uisng number 5, 10, and 8 as an example_
+
+```c,.h
+int LED1 = 8;
+int LED2 = 9;
+int LED3 = 10;
+int LED4 = 11;
+
+void setup()
+{
+  pinMode(LED1, OUTPUT);
+  pinMode(LED2, OUTPUT);
+  pinMode(LED3, OUTPUT);
+  pinMode(LED4, OUTPUT);
+}
+
+void loop()
+{
+  binary(5);
+  delay(2000);
+  binary(10);
+  delay(2000);
+  binary(8);
+}
+
+void binary(int num)
+{
+  if( num%2 == 0 )
+  {
+    digitalWrite(LED1, LOW);
+  }
+    else if( num%2 == 1 )
+    {
+      digitalWrite(LED1, HIGH);
+  }
+  if( num%4 > 1)
+  {
+    digitalWrite(LED2, HIGH);
+  }
+    else
+    {
+      digitalWrite(LED2,LOW);
+  }
+  if ( num%8 >= 4)
+  {
+    digitalWrite(LED3, HIGH);
+  }
+    else
+    {
+      digitalWrite(LED3, LOW);
+  }
+  if ( num%16 >= 8)
+  {
+    digitalWrite(LED4, HIGH);
+  }
+    else
+    {
+      digitalWrite(LED4, LOW);
+  }
+}
+```
+_demonstration:_ ![Diagram](dectobin.gif)
+
+**_Problem(fixed): how to convert decimal numbers to binary numbers?_**
+
+Sol: find the pattern digit by digit, and use mode to display each LEDlight.
+
+### 4. HMW: how to 
+### 5. Introduction to binary logic gates
+### 6. building an lectronic number screen
 
 
 
