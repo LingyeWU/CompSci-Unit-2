@@ -1,3 +1,8 @@
+Nov.6th
+=========
+Today we've started a new unit on binary-decimal conversion. We've discussed about how to create a two-button communication system and what are other alternatives for keyboard and mouses. We've also touched upon the idea of using Tinkercad and Arduino. 
+
+
 Nov.11th
 =========
 Comparing BASH to C
@@ -28,3 +33,15 @@ Variebles in C:
 8 | _long_: Long variables are extended size variables for number storage, and store 32 bits (4 bytes), from -2,147,483,648 to 2,147,483,647.
 9 | _unsigned long_: Unsigned long variables are extended size variables for number storage, and store 32 bits (4 bytes). Unlike standard longs unsigned longs won’t store negative numbers, making their range from 0 to 4,294,967,295 (2^32 - 1).
 10 | _string_: Text strings can be represented in two ways. you can use the String data type, which is part of the core as of version 0019, or you can make a string out of an array of type char and null-terminate it.
+
+Nov.13th
+=========
+
+Nov.18th
+=========
+
+Nov.19th
+=========
+
+Nov.20th
+=========
