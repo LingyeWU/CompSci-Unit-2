@@ -224,7 +224,94 @@ _demonstration:_
 
 Sol: find the pattern digit by digit, and use mode to display each LEDlight.
 
-### 4. HMW: how to 
+### 4. Create one program curcuit that implements each of the tables below:
+
+- table 1
+
+Button A | Button B | Out 1 | Out 2
+--- | --- | --- | ---
+0 | 0 | 1 | 0
+0 | 1 | 0 | 1
+1 | 0 | 1 | 1
+1 | 1 | 0 | 0
+
+- table 2
+
+Button A | Button B | Out 1 | Out 2
+--- | --- | --- | ---
+0 | 0 | 1 | 0
+0 | 1 | 0 | 1
+1 | 0 | 0 | 1
+1 | 1 | 1 | 1
+
+- table 3
+
+Button A | Button B | Button C | Out 1 | Out 2
+--- | --- | --- | --- | ---
+0 | 0 | 0 | 1 | 1
+0 | 0 | 1 | 1 | 1
+0 | 1 | 0 | 1 | 0
+0 | 1 | 1 | 1 | 0
+1 | 0 | 0 | 0 | 1
+1 | 0 | 1 | 1 | 1
+1 | 1 | 0 | 1 | 1
+1 | 1 | 1 | 1 | 1
+
+**First attempt for this question:**
+
+```c,.h
+//This program will implement table given by teacher
+
+
+
+// Set variable names to ports on arduino
+int butA = 13;
+int butB = 12;
+int butC = 11;
+int out1 = 3;
+int out2 = 4;
+
+
+//define which ports are inputs and which are outputs
+void setup ()
+{
+  pinMode(butA, INPUT);
+  pinMode(butB, INPUT);
+  pinMode(butC, INPUT);
+  pinMode(out1, OUTPUT);
+  pinMode(out2, OUTPUT);
+}
+
+//turning lights on and off based on pressed buttons
+void loop()
+{
+  if (digitalRead(butA) == LOW && digitalRead(butB) == LOW && digitalRead(butC) == LOW){
+ 		digitalWrite(out1, HIGH);
+  		digitalWrite(out2, HIGH); }
+  else if (digitalRead(butA) == LOW && digitalRead(butB) == LOW && digitalRead(butC) == HIGH){
+ 		digitalWrite(out1, HIGH);
+  		digitalWrite(out2, HIGH); }
+  else if (digitalRead(butA) == LOW && digitalRead(butB) == HIGH && digitalRead(butC) == LOW){
+ 		digitalWrite(out1, HIGH);
+  		digitalWrite(out2, LOW); }
+  else if (digitalRead(butA) == LOW && digitalRead(butB) == HIGH && digitalRead(butC) == HIGH){
+ 		digitalWrite(out1, HIGH);
+  		digitalWrite(out2, LOW); }
+  else if (digitalRead(butA) == HIGH && digitalRead(butB) == LOW && digitalRead(butC) == LOW){
+ 		digitalWrite(out1, LOW);
+  		digitalWrite(out2, HIGH); }
+  else if (digitalRead(butA) == HIGH && digitalRead(butB) == LOW && digitalRead(butC) == HIGH){
+ 		digitalWrite(out1, HIGH);
+  		digitalWrite(out2, HIGH); }
+  else if (digitalRead(butA) == HIGH && digitalRead(butB) == HIGH && digitalRead(butC) == LOW){
+ 		digitalWrite(out1, HIGH);
+  		digitalWrite(out2, HIGH); }
+  else {
+ 		digitalWrite(out1, HIGH);
+  		digitalWrite(out2, HIGH); }
+}
+```
+
 ### 5. Introduction to binary logic gates
 ### 6. building an lectronic number screen
 
