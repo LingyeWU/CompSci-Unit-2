@@ -70,7 +70,6 @@ What options could we provide to allow this person interact with the computer?
 **Fig.1** The two ways proposed by Rikio and Uzay. Uzay's idea is based on a static alphabet where one button is used for the "next letter" and the other one "OK" for inputting the letter, with one drawback of not able to make any mistakes while typing; while Rikio's idea is based on the alphabet looping itself automaticly, therefore having the functionality of input (button"OK") and delete(button"DEL").
 
 **my idea:**
-
 To put multiple functionalities on the buttons, therefore making one of the buttons "func", and the other "delete". That is, to always have the alphabet displayed to users as a table(i.e 5 times 6), meantime giving the the "func" button functionalities such as "one press to the right""two press to the left""long press go down", along with the other botton with the delete fuction.
 
 ### 2. Create a traffic light using Arduino
@@ -120,6 +119,7 @@ void changeLights(){
 ```
 
 __demonstration:__ 
+
 ![Diagram](trafficlight.gif)
 
 **_Problem(fixed): how do variables and 'void' work in arduino_**
@@ -132,7 +132,28 @@ Sol to the first problem:
 
 _reference:_ “Void.” Arduino Reference, https://www.arduino.cc/reference/tr/language/variables/data-types/void/.
 
-### 3. Converting decimals to binary, shown by LED lights
+### 3. Converting decimals to binary, shown by LED lights how to count from 0 to 15
+
+- How to count from 0 to 15 in binary:
+
+Dec | BIN | Hexadecimal
+--- | --- | ---
+0 | 0000 | 0
+1 | 0001 | 1
+2 | 0010 | 2 
+3 | 0011 | 3
+4 | 0100 | 4
+5 | 0101 | 5
+6 | 0110 | 6
+7 | 0111 | 7
+8 | 1000 | 8
+9 | 1001 | 9
+10 | 1010 | A
+11 | 1011 | B
+12 | 1100 | C
+13 | 1101 | D
+14 | 1110 | E
+15 | 1111 | F
 
 _This code shows how to convert decimals to binary (up to 4 binary digits), shown by 4 LED lights, uisng number 5, 10, and 8 as an example_
 
@@ -195,7 +216,9 @@ void binary(int num)
   }
 }
 ```
-_demonstration:_ ![Diagram](dectobin.gif)
+_demonstration:_ 
+
+![Diagram](dectobin.gif)
 
 **_Problem(fixed): how to convert decimal numbers to binary numbers?_**
 
