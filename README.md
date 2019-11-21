@@ -257,12 +257,10 @@ Button A | Button B | Button C | Out 1 | Out 2
 1 | 1 | 0 | 1 | 1
 1 | 1 | 1 | 1 | 1
 
+
 **First attempt for this question:**
 
 ```c,.h
-//This program will implement table given by teacher
-
-
 
 // Set variable names to ports on arduino
 int butA = 13;
@@ -312,10 +310,170 @@ void loop()
 }
 ```
 
+**Second attempt for this question - convert binary to decimal:**
+
+```c,.h
+int butA = 10;
+int butB = 11;
+int butC = 12;
+int led1 = 3;
+int led2 = 4;
+void setup()
+{
+  pinMode(butA, INPUT);
+  pinMode(butB, INPUT);
+  pinMode(butC, INPUT);
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+}
+int decimal;
+void loop()
+  
+{
+  decimal = digitalRead(butA)*pow(2,2);
+  decimal += digitalRed(butB)*pow(2,1);
+  decimal += digitalRead(butC)*pow(2,0);
+  
+  if(decimal < 2 || decimal > 4) {
+    digitalWrite(led1, HIGH);
+    digitalWrite(led1, HIGH);
+  }
+  if (decimal == 4)
+  {
+    digitalWrite(led1, LOW);
+    digitalWrite(led2,HIGH);
+  }
+  if (decimal == 2 || decimal ==3)
+  {
+    digitalWrite(led1, HIGH);
+    digitalWrite(led2, LOW);
+  }
+  
+}
+```
+
+- Comparison for the two attempts
+
+--- | Attempt 1 | Attempt 2 
+--- | --- | ---
+Pros | Easier to understand; not converting to decimal | short; scalable
+Cons | more lines of codes; not scalable | when there is not pattern in the outputs becomes attempt 1 
+
+
+**Third attempt for this question - using logic gates**
+
+```c,.h
+int butA = 13;
+int butB = 12;
+int butC = 11;
+int out1 = 3;
+int out2 = 4;
+
+void setup()
+{
+  pinMode(butA, INPUT);
+  pinMode(butB, INPUT);
+  pinMOde(butC, INPUT)
+  pinMode(out1, OUTPUT);
+  pinMode(out2, OUTPUT);
+    
+}
+
+bool a void loop()
+
+{
+bool A = digitalRead(butA);
+bool B = digitalRead(butB);
+bool C = digitalRead(butC);
+bool a = B | (!A & !B) | (C & A)
+bool b = A | (!A & !B)
+ digitalWrite(out1, a);
+ digitalWrite(out2, b);
+}
+```
+
+**_Problem(fixed): logic gates in Aruduino_**
+
+Reference: Instructables. “Universal Logic Gates Implementer With Arduino.” Instructables, Instructables, 21 Sept. 2017, https://www.instructables.com/id/Universal-Logic-Gates-Implementer-With-Arduino/.
+
+
 ### 5. Introduction to binary logic gates
-### 6. building an lectronic number screen
+
+- logic gates:
+![Diagram](logic.png)
+Citation: “Chapter 3-Logic Gates and Logic Circuits.” IGCSE Computer Science, 24 Sept. 2017, https://avyscomputerscienceblog.wordpress.com/chapter-3/.
 
 
+### 6. building an electronic number screen
+
+From all investigated above, we are able to create an electronic number screen at this stage with 7 LEDs. The goal is to print out 0 to 7 on the screen using logic gates. (Nov.20th, Collaborated with Tuan)
+
+- Working in process:
+![Diagram](p1.jpg)
+![Diagram](p2.jpg)
+
+**fig** Steps taken to get the formula for each letter.
+
+![Diagram](p3.jpg)
+![Diagram](p4.jpg)
+![Diagram](p5.jpg)
+
+Final code: 
+```c,.h
+int LEDA = 1;
+int LEDB = 2;
+int LEDC = 3;
+int LEDD = 4;
+int LEDE = 5;
+int LEDF = 6;
+int LEDG = 7;
+int butA = 10;
+int butB = 11;
+int butC = 12;
+
+
+void setup()
+{
+  pinMode(LEDA, OUTPUT);
+  pinMode(LEDB, OUTPUT);
+  pinMode(LEDC, OUTPUT);
+  pinMode(LEDD, OUTPUT);
+  pinMode(LEDE, OUTPUT);
+  pinMode(LEDF, OUTPUT);
+  pinMode(LEDG, OUTPUT);
+  pinMode(butA, INPUT);
+  pinMode(butB, INPUT);
+  pinMode(butC, INPUT);
+  
+}
+
+void loop()
+{
+   bool A = digitalRead(butA);
+   bool B = digitalRead(butB);
+   bool C = digitalRead(butC);
+   bool a = (!C & !A) | (B & !A) | (!C & A) | (A & !B);
+   bool b = (!C & A) | (!B & !A) | (A & !B);
+   bool c = (!A & !C) | (!A & !B) | (!C & B);
+   bool d = (!A & !C) | (!A & B) | (B & !C) | (C & A & !B);
+   bool e = A | (!C & !B) | (C & B);
+   bool f = (!A & B) | (!C & !A) | (!C & !B);
+   bool g = (!A & B) | (B & !C) | (A & !B);
+   digitalWrite(LEDA, a);
+   digitalWrite(LEDB, b);
+   digitalWrite(LEDC, c);
+   digitalWrite(LEDD, d);
+   digitalWrite(LEDE, e);
+   digitalWrite(LEDF, f);
+   digitalWrite(LEDG, g);
+                    
+}
+```
+
+Demonstration:
+![Diagram](work.gif)
+
+**_Problem(unfixed): there are some problem with the code that the LED is not able to display in order._**
 
 Evaluation
 ----------
