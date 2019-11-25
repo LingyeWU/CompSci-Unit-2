@@ -59,6 +59,19 @@ Expected measureable outcomes by the client includes:
 
 Design
 ----------
+### 1. Requirement of the design
+
+- Usability
+Usability is the ease of use and learnability of a human-made object such as a tool or device. In software engineering, usability is the degree to which a software can be used by specified consumers to achieve quantified objectives with effectiveness, efficiency, and satisfaction in a quantified context of use.(**keyword**: elegance, clarity, intuitive)
+
+**Citation** “Usability.” Wikipedia, Wikimedia Foundation, 13 Nov. 2019, https://en.wikipedia.org/wiki/Usability.
+
+- HCD(Human-centered design) 
+Human-centered design is a creative approach to problem solving and the backbone of our work at IDEO.org. It’s a process that starts with the people you’re designing for and ends with new solutions that are tailor made to suit their needs. Human-centered design is all about building a deep empathy with the people you’re designing for; generating tons of ideas; building a bunch of prototypes; sharing what you’ve made with the people you’re designing for; and eventually putting your innovative new solution out in the world. (**keyword**: Feedback, discoverability)
+
+**Citation** 
+[1] “What Is Human-Centered Design?” Design Kit, https://www.designkit.org/human-centered-design.
+[2] Posner J, Mars R."It's not you, bad doors are evrywhere" 2016, Retrieved (25 Nov 2019)
 
 Development
 ----------
@@ -474,6 +487,9 @@ Demonstration:
 ![Diagram](work.gif)
 
 **_Problem(unfixed): there are some problem with the code that the LED is not able to display in order._**
+
+### 7. Developing the input system (Step one: Enter english text show in the serial monitor use the LCD screen)
+
 
 Evaluation
 ----------
