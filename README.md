@@ -1,3 +1,30 @@
+Feedback Nov 26 (you can delete this section later it will remain in the history)
+
+|No.|How to improve        |
+|-|------------- |
+|①| Under the development section, you are including all the source code for the programs. It is better if you include only small parts of the code that are new to you or that show an important algorithm. This is because the source code is anyway in the repo so no need to repeat. 
+
+**For example:** The code below shows how to read the status of a button connected to port 13 in the Arduino:
+```.c
+bool A = digitalRead(13);
+```
+Note that the variable A was created of type Bool since the input is binary data.|
+
+|No.|How to improve        |
+|-|------------- |
+|②| Add figure caption to your figures and then explain what you see in them. Figures are quite ambiguous by themselves.| 
+
+**For example:**
+![Diagram](trafficlight.png)
+Fig. 2. Circuit for the party lights with an Arduino
+
+As shown in Fig. 2, the circuit for a party light system with an Arduino includes three lights. 
+
+|No.|How to improve        |
+|-|------------- |
+|③| Criterion 6 needs clarification. What do you consider **high** accuracy and speed? We need specific values than can be measured during the evaluation stage.| 
+
+-----
 Martian Decoder
 ===========================
 
