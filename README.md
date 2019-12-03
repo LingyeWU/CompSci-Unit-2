@@ -2,7 +2,7 @@ Feedback Nov 26 (you can delete this section later it will remain in the history
 
 |No.|How to improve        |
 |-|------------- |
-|①| Under the development section, you are including all the source code for the programs. It is better if you include only small parts of the code that are new to you or that show an important algorithm. This is because the source code is anyway in the repo so no need to repeat. 
+|①| Under the development section, you are including all the source code for the programs. It is better if you include only small parts of the code that are new to you or that show an important algorithm. This is because the source code is anyway in the repo so no need to repeat. `(Response: solved via adding new elements)`
 
 **For example:** The code below shows how to read the status of a button connected to port 13 in the Arduino:
 ```.c
@@ -12,7 +12,7 @@ Note that the variable A was created of type Bool since the input is binary data
 
 |No.|How to improve        |
 |-|------------- |
-|②| Add figure caption to your figures and then explain what you see in them. Figures are quite ambiguous by themselves.| 
+|②| Add figure caption to your figures and then explain what you see in them. Figures are quite ambiguous by themselves.`(Response: solved)`| 
 
 **For example:**
 ![Diagram](trafficlight.png)
@@ -22,7 +22,7 @@ As shown in Fig. 2, the circuit for a party light system with an Arduino include
 
 |No.|How to improve        |
 |-|------------- |
-|③| Criterion 6 needs clarification. What do you consider **high** accuracy and speed? We need specific values than can be measured during the evaluation stage.| 
+|③| Criterion 6 needs clarification. What do you consider **high** accuracy and speed? We need specific values than can be measured during the evaluation stage.`(Response: this is solved via clarifying the meaning)`| 
 
 -----
 Martian Decoder
@@ -81,8 +81,9 @@ Expected measureable outcomes by the client includes:
 1. Provide a communication system that allow stations to communicate seamlessly using English.
 1. Keyboard input on each station is limited to 2 push buttons. 
 1. 100W lights are buzzers are available.
-1. The program should has a high accuracy and speed in translating.
+1. The output of the program(light bulbs), should be able to be identified and translated among residences clearly.
 1. The program should be able to separate each language from each other.
+1. The program should be able to limit all its functionality within 2 buttons.
 
 Design
 ----------
@@ -100,6 +101,24 @@ Human-centered design is a creative approach to problem solving and the backbone
 [1] “What Is Human-Centered Design?” Design Kit, https://www.designkit.org/human-centered-design.
 [2] Posner J, Mars R."It's not you, bad doors are evrywhere" 2016, Retrieved (25 Nov 2019)
 
+### 2. System diagram
+
+![Diagram](g.jpg)
+
+[fig.1] First scratch of the system diagram explaining the general functionality of the program.
+
+### 3. Explanation of the system diagram
+- Input: the Martian decoder is a highly user-friendly program where only two buttons are designed for input, requiring really low user skills. By creating different syntax with the buttons the input is different and is able to locate on alphabets, numbers, and basic functionality such as "delete" and "send".
+
+- Output: All message will be transmistted via light bulbs, where one (or two) light bulbs are used for each residence as different stations to communicate.
+
+### 4. Binary to Morse code
+At this point we have not fully developed the decode, yet are able to identify ways of translation morse code in binary forms.
+![Diagram](1.jpg)
+[fig.2] Binary to Morse code
+
+
+
 Development
 ----------
 Nov.6th
@@ -114,6 +133,10 @@ To put multiple functionalities on the buttons, therefore making one of the butt
 
 ### 2. Create a traffic light using Arduino
 ![Diagram](trafficlight.png)
+
+[fig.3] demonstration screenshot from tinkercard
+
+
 
 _code for traffic light:_
 ```c,.h
@@ -162,11 +185,15 @@ __demonstration:__
 
 ![Diagram](trafficlight.gif)
 
+[fig.4] Gif demonstration of the program
+
 **_Problem(fixed): how do variables and 'void' work in arduino_**
 
 Sol to the first problem:
 
 ![Diagram](variables.jpg)
+
+[fig.5] Variables in arduino
 
 **void**: The void keyword is used only in function declarations. It indicates that the function is expected to return no information to the function from which it was called.
 
@@ -259,6 +286,8 @@ void binary(int num)
 _demonstration:_ 
 
 ![Diagram](dectobin.gif)
+
+[fig.3] Gif demonstrtaion of the program
 
 **_Problem(fixed): how to convert decimal numbers to binary numbers?_**
 
@@ -441,6 +470,9 @@ Reference: Instructables. “Universal Logic Gates Implementer With Arduino.” 
 
 - logic gates:
 ![Diagram](logic.png)
+
+[fig.6] Logic gates rules
+
 Citation: “Chapter 3-Logic Gates and Logic Circuits.” IGCSE Computer Science, 24 Sept. 2017, https://avyscomputerscienceblog.wordpress.com/chapter-3/.
 
 
@@ -452,11 +484,15 @@ From all investigated above, we are able to create an electronic number screen a
 ![Diagram](p1.jpg)
 ![Diagram](p2.jpg)
 
+[fig.7,8] Working in progress
+
 **fig** Steps taken to get the formula for each letter.
 
 ![Diagram](p3.jpg)
 ![Diagram](p4.jpg)
 ![Diagram](p5.jpg)
+
+[fig.9,10,11] Steps of calculation
 
 Final code: 
 ```c,.h
@@ -511,12 +547,213 @@ void loop()
 ```
 
 Demonstration:
+
 ![Diagram](work.gif)
+[fig.12] Gif demonstrtaion of the program
 
-**_Problem(unfixed): there are some problem with the code that the LED is not able to display in order._**
+**_Problem(fixed): there are some problem with the code that the LED is not able to display in order._**
 
-### 7. Developing the input system (Step one: Enter english text show in the serial monitor use the LCD screen)
+### 7. Developing the input system 
+
+#### Step one: Enter english text show in the serial monitor use the LCD screen
+1. Solution 1: *The use of matrix array*
+![Diagram](f.jpg)
+
+[fig.13] How the matrix array work.
+
+- Explanation: in this case, all digits, numbers, and options are stored into a matrix array, where each of the syntax can be reached through clicking the buttons for different times(i.e letter "e" can be reached via clicking both buttons one time). Within this designing process, the functionality of "interruption" is often used. 
+
+_Interrupts_: An Interrupt's job is to make sure that the processor responds quickly to important events. When a certain signal is detected, an Interrupt (as the name suggests) interrupts whatever the processor is doing, and executes some code designed to react to whatever external stimulus is being fed to the Arduino. Once that code has wrapped up, the processor goes back to whatever it was originally doing as if nothing happened. 
+
+**Coding part**
+Below is the code demonstrating this solution
+```c,.h
+String text = "";
+int index = 0; 
+// add all the letters and digits to the keyboard
+
+String keyboard[38]={"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "SENT", "DEL"};
+int numOptions = 38; //size of keyboard 
+
+void setup()
+{
+  Serial.begin(9600);
+  attachInterrupt(0, changeLetter, RISING);//button A in port 2
+  attachInterrupt(1, selected, RISING);//button B in port 3
+}
+
+void loop()
+{
+  Serial.println("Option (Select:butB, Change:butA): " + keyboard[index]);
+  Serial.println("Message: "+ text);
+  delay(100);
+}
+
+//This function changes the letter in the keyboard
+void changeLetter(){
+  index++;
+    //Explain what the functionality of the if condition below 
+
+  if(index>numOptions){
+  	index=0; //loop back to first row
+  } 
+}
+
+void selected() {
+  String key=keyboard[index];
+	if ( key == "DEL" ) {
+	int len = text.length();
+	text.remove(len-1);
+	} else if ( key == "SEND") {
+	Serial.print('Message sent');
+	text = "";
+	} else {
+ 	text = text +  key;
+	}
+	index=0; 
+
+}
+```
+2. Solution 2: using scroll, interrupt. (By Tuan and Lingye)
+![Diagram](a.jpg)
+
+[fig.14] Program demonstrated in Tinkercad
+
+Below is the demonstrative diagram for the idea:
+![Diagram](e.jpg)
+
+
+
+Explanation: This program inputs all digits, numbers, and general options "delete" and "send" into the first row of LCD, uisng the functionality of "scroll" and "interruption" to control the first row to scroll left or right, where the input is always on the first letter of the first row. The sidplay of the letters users chose are displayed on the second row.
+
+- Example of scroll:
+
+```c,.h
+  lcd.scrollDisplayRight();  
+      } if (timepress1 > 6000){
+```
+
+- Example of interruption:
+
+```c,.h
+long last_interrupt_time1 = 0;
+   long interrupt_time1 = millis();
+   long timepress1 = millis();
+   if(interrupt_time1 - last_interrupt_time1 > 200) {
+      if(digitalRead(but2) == HIGH){
+      press2++;
+```
+
+Functionality:
+[1] But1: Scroll the first row to the right by 1
+[2] But2: Scroll the first row to the left by 1
+
+Working in process:
+
+![Diagram](b.jpg)
+![Diagram](c.jpg)
+![Diagram](d.jpg)
+
+
+[fig.15,16,17] Photos of working in process
+
+- Code so far: 
+```c,.h
+// include the library code:
+#include <LiquidCrystal.h>
+
+
+
+// initialize the library with the numbers of the interface pins
+LiquidCrystal lcd(12, 11, 5, 4, 7, 6);
+
+int but1 = 2;
+int but2 = 3;
+int Col1 = 0;
+int Row1 = 0;
+int Col2 = 0;
+int Row2 = 1;
+int press1 = 0;
+int press2 = 0;
+int x =0;
+String text = "";
+
+char letter[]={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','x','y','z','w','1','2','3','4','5','6','7','8','9','0', ' '};
+void setup() {
+  // set up the LCD's number of columns and rows:
+  lcd.begin(16, 2);
+  
+  pinMode(but1, INPUT);
+  pinMode(but2, INPUT);
+  
+  for(int i=0; i < 38; i++){
+    lcd.print(letter[i]);
+    delay(100);
+  }
+   
+
+}
+
+void loop() {
+  attachInterrupt(0, hpress1, CHANGE);
+  attachInterrupt(1, hpress2, CHANGE);
+
+}
+  
+ void hpress1(){
+    
+   long last_interrupt_time = 0;
+   long interrupt_time = millis();
+   long timepress2 = millis();
+   if(interrupt_time - last_interrupt_time > 200) {
+     if(digitalRead(but1) == HIGH){
+      press1++;
+     } if (press1 == 1){
+        x--;
+        press1 = 0;
+      lcd.scrollDisplayLeft();  
+      } if (timepress2 > 6000){
+       lcd.setCursor(0, 1);
+       lcd.blink();
+       lcd.print("hii");
+      
+   }
+     timepress2 = last_interrupt_time;
+ }
+ }
+  void hpress2(){
+    
+   long last_interrupt_time1 = 0;
+   long interrupt_time1 = millis();
+   long timepress1 = millis();
+   if(interrupt_time1 - last_interrupt_time1 > 200) {
+      if(digitalRead(but2) == HIGH){
+      press2++;
+     } if (press2 == 1){
+        x--;
+        press2 = 0;
+      lcd.scrollDisplayRight();  
+      } if (timepress1 > 6000){
+       lcd.setCursor(0, 1);
+        lcd.blink();
+        lcd.print("hello");
+      }
+     
+     
+   last_interrupt_time1=interrupt_time1;
+   timepress1 = last_interrupt_time1;  
+   }
+  }
+
+
+
+```
+
 
 
 Evaluation
 ----------
+
+- Will be updated when the project is finished
+- all citation are in-text citation
+
