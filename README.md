@@ -136,9 +136,24 @@ To put multiple functionalities on the buttons, therefore making one of the butt
 
 [fig.3] demonstration screenshot from tinkercard
 
+- Here are the code for how to **void setup**
 
+```c,.h
+void setup()
+{
+  pinMode(red, OUTPUT);
+  pinMode(yellow, OUTPUT);
+  pinMode(green, OUTPUT);
+  digital.write(green, HIGH);
+}
+```
 
-_code for traffic light:_
+- Code below shows how to connect to port 10
+```c,.h
+ int red = 10;
+```
+
+_complete code for traffic light:_
 ```c,.h
  int red = 10;
  int yellow = 9;
