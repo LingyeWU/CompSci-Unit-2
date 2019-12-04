@@ -52,3 +52,30 @@ Today we have spent a whole class on doing the logic gate worksheet. I felt much
 Nov.20th
 =========
 Today Tuan and I collaborated to create a electronic number screen. The process was fairly complicated. We first encountered the problem on the circuit but quickly fixed it.
+
+Nov.25th
+==========
+We started creating english input keyboard with 2 buttons:
+
+1. Brainsotrm different ideas
+1. Draw it out and put it into readme file under planing or development section
+1. Start research
+1. Start coding
+I was really lost in today's class because I wasn't sure about what to do at all. It is easy to come up with an idea but I have no clue about how to put those ideas into code.
+
+Nov.27th
+==========
+We built curcuits today. Dr. ruben intoduced us to the matrix array. We've got a homework and I managed to finish pretty fast.
+
+Dec.2nd
+========
+Today we continued building our project.
+We are supposed to do:
+1. Find LCD circut in thinkercad and add 2 buttons
+1. Build LCD circut with arduino kit
+1. Draw a flow diagram for englsih keyboard program uploaded to classroom
+1. Create letter to binary conversation table.
+
+Dec.4th
+========
+Today we had the test. SOooooooooooOooOOOOOOOOOOO hard.
