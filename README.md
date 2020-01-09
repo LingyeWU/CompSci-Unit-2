@@ -764,7 +764,24 @@ void loop() {
 
 ```
 
+**Protocol:**
 
+We began by learning about protocols used in technology today, furthering our background information so we can create our own protocol to communicate effectively.
+
+**Some highly prominent protocols used in many of today's technologies, their creator(s), and their function. 
+
+| Name  | Creator | Summary |
+| :----: |:----:| :----:|
+| IP | Vint Cerf & Bob Kahn | Interface identification address in the network | 
+| FTP | Abhay Bhusan | Transfer files between client and server | 
+| SSH | Tatu Ylonen | Log into a remote machine and execute commands | 
+| SMTP | RFC821 | Send/recieve emails | 
+| Telnet | UCLA | Used on the internet or local area network |
+| POP3 | Mark Crispin | Used to send/receive emails and download emails | 
+| HTTP | Tim Berners-Lee | Used on worldwide web for anything clickable (hyperlinks, etc) | 
+| VPN | Gurdeep Singh-Pall  | Provides encrypted internet connections | 
+
+Based off this information and knowledge about protocols, we now worked together to find a common protocol for our communication between Earth, the Moon, and Mars. 
 
 Evaluation
 ----------
