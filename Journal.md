@@ -79,3 +79,28 @@ We are supposed to do:
 Dec.4th
 ========
 Today we had the test. SOooooooooooOooOOOOOOOOOOO hard.
+
+Dec. 10th
+===========
+
+Continued to work on the LCD screen and buttons to input English. We got it to work after configuring the program correctly on the computer -- the main issue was that the Arduino wasn't selected through the correct port. After this, we worked on psuedocode on how to actually translate the text entered by the user into morse code (Earth's job). While we gathered that we should use a for loop and a switch, we still weren't exactly sure how to take one letter out of the string. 
+
+Dec. 11th
+===========
+Today we were assigned homework on researching one part of the Arduino and researching it, creating a slides presentation, and presenting it at the next class on Friday. From here, we have time to continue work on the project of translating our English into morse code. 
+
+
+December. 13th
+================
+Today was the last day before winter break. Our class was cancelled!
+
+January 6th
+==============
+- This was the first day back from break. We learned about C++ and how it has many similarities to Arduino but is slightly different. We created a numerical triangle pyramid and played away with the new language. 
+- We also learned about creating a protocol (ex. IP, VPN, etc) which will be useful for our morse/binary interplanetary communication system as detailed in the README of this repository.
+- I am looking forward to continuing working on th emars project.
+
+January 8th
+===================
+Today we basically spent the entire class to do the easy C++ exercises.
+- The exercise is mainly about if statements
