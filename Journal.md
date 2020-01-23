@@ -104,3 +104,20 @@ January 8th
 ===================
 Today we basically spent the entire class to do the easy C++ exercises.
 - The exercise is mainly about if statements
+
+Jan.12th
+=========
+Today we started off with some C questions and continued working on Arduino.
+
+Jan.13th
+===========
+Today we continued working on Arduino. After putting everything together, the tinkercard stopped working.
+Fortunately, after we have tried out the program on the actual Arduino, it worked just as fine.
+
+
+Jan.14th
+=========
+Today we had an interesting debate over the article about automation of work and if it is unethical to the employer.
+The debate was in form of a Socratic circle where 2 people are selected as the "manager" and the "employee".
+We really gained an insight into this issue and found more interesting points from each other.
+
