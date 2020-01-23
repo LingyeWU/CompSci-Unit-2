@@ -15,7 +15,7 @@ Note that the variable A was created of type Bool since the input is binary data
 |②| Add figure caption to your figures and then explain what you see in them. Figures are quite ambiguous by themselves.`(Response: solved)`| 
 
 **For example:**
-![Diagram](trafficlight.png)
+![Diagram](/img/trafficlight.png)
 Fig. 2. Circuit for the party lights with an Arduino
 
 As shown in Fig. 2, the circuit for a party light system with an Arduino includes three lights. 
@@ -103,7 +103,7 @@ Human-centered design is a creative approach to problem solving and the backbone
 
 ### 2. System diagram
 
-![Diagram](g.jpg)
+![Diagram](/img/g.jpg)
 
 [fig.1] First scratch of the system diagram explaining the general functionality of the program.
 
@@ -114,7 +114,7 @@ Human-centered design is a creative approach to problem solving and the backbone
 
 ### 4. Binary to Morse code
 At this point we have not fully developed the decode, yet are able to identify ways of translation morse code in binary forms.
-![Diagram](1.jpg)
+![Diagram](img/1.jpg)
 [fig.2] Binary to Morse code
 
 
@@ -125,14 +125,14 @@ Nov.6th
 
 ### 1. Consider the case of a challenged person who cannot operate a keyboard or a mouse. 
 What options could we provide to allow this person interact with the computer?
-![Diagram](2button.jpg)
+![Diagram](img/2button.jpg)
 **Fig.1** The two ways proposed by Rikio and Uzay. Uzay's idea is based on a static alphabet where one button is used for the "next letter" and the other one "OK" for inputting the letter, with one drawback of not able to make any mistakes while typing; while Rikio's idea is based on the alphabet looping itself automaticly, therefore having the functionality of input (button"OK") and delete(button"DEL").
 
 **my idea:**
 To put multiple functionalities on the buttons, therefore making one of the buttons "func", and the other "delete". That is, to always have the alphabet displayed to users as a table(i.e 5 times 6), meantime giving the the "func" button functionalities such as "one press to the right""two press to the left""long press go down", along with the other botton with the delete fuction.
 
 ### 2. Create a traffic light using Arduino
-![Diagram](trafficlight.png)
+![Diagram](img/trafficlight.png)
 
 [fig.3] demonstration screenshot from tinkercard
 
@@ -198,7 +198,7 @@ void changeLights(){
 
 __demonstration:__ 
 
-![Diagram](trafficlight.gif)
+![Diagram](img/trafficlight.gif)
 
 [fig.4] Gif demonstration of the program
 
@@ -206,7 +206,7 @@ __demonstration:__
 
 Sol to the first problem:
 
-![Diagram](variables.jpg)
+![Diagram](img/variables.jpg)
 
 [fig.5] Variables in arduino
 
@@ -300,7 +300,7 @@ void binary(int num)
 ```
 _demonstration:_ 
 
-![Diagram](dectobin.gif)
+![Diagram](img/dectobin.gif)
 
 [fig.3] Gif demonstrtaion of the program
 
@@ -484,7 +484,7 @@ Reference: Instructables. “Universal Logic Gates Implementer With Arduino.” 
 ### 5. Introduction to binary logic gates
 
 - logic gates:
-![Diagram](logic.png)
+![Diagram](img/logic.png)
 
 [fig.6] Logic gates rules
 
@@ -496,16 +496,16 @@ Citation: “Chapter 3-Logic Gates and Logic Circuits.” IGCSE Computer Science
 From all investigated above, we are able to create an electronic number screen at this stage with 7 LEDs. The goal is to print out 0 to 7 on the screen using logic gates. (Nov.20th, Collaborated with Tuan)
 
 - Working in process:
-![Diagram](p1.jpg)
-![Diagram](p2.jpg)
+![Diagram](img/p1.jpg)
+![Diagram](img/p2.jpg)
 
 [fig.7,8] Working in progress
 
 **fig** Steps taken to get the formula for each letter.
 
-![Diagram](p3.jpg)
-![Diagram](p4.jpg)
-![Diagram](p5.jpg)
+![Diagram](img/p3.jpg)
+![Diagram](img/p4.jpg)
+![Diagram](img/p5.jpg)
 
 [fig.9,10,11] Steps of calculation
 
@@ -563,7 +563,7 @@ void loop()
 
 Demonstration:
 
-![Diagram](work.gif)
+![Diagram](img/work.gif)
 [fig.12] Gif demonstrtaion of the program
 
 **_Problem(fixed): there are some problem with the code that the LED is not able to display in order._**
@@ -572,7 +572,7 @@ Demonstration:
 
 #### Step one: Enter english text show in the serial monitor use the LCD screen
 1. Solution 1: *The use of matrix array*
-![Diagram](f.jpg)
+![Diagram](img/f.jpg)
 
 [fig.13] How the matrix array work.
 
@@ -630,12 +630,12 @@ void selected() {
 }
 ```
 2. Solution 2: using scroll, interrupt. (By Tuan and Lingye)
-![Diagram](a.jpg)
+![Diagram](img/a.jpg)
 
 [fig.14] Program demonstrated in Tinkercad
 
 Below is the demonstrative diagram for the idea:
-![Diagram](e.jpg)
+![Diagram](img/e.jpg)
 
 
 
@@ -665,9 +665,9 @@ Functionality:
 
 Working in process:
 
-![Diagram](b.jpg)
-![Diagram](c.jpg)
-![Diagram](d.jpg)
+![Diagram](img/b.jpg)
+![Diagram](img/c.jpg)
+![Diagram](img/d.jpg)
 
 
 [fig.15,16,17] Photos of working in process
@@ -764,7 +764,7 @@ void loop() {
 
 ```
 
-**Protocol:**
+### Step 2 Design **Protocol:**
 
 We began by learning about protocols used in technology today, furthering our background information so we can create our own protocol to communicate effectively.
 
@@ -781,11 +781,14 @@ We began by learning about protocols used in technology today, furthering our ba
 | HTTP | Tim Berners-Lee | Used on worldwide web for anything clickable (hyperlinks, etc) | 
 | VPN | Gurdeep Singh-Pall  | Provides encrypted internet connections | 
 
-Based off this information and knowledge about protocols, we now worked together to find a common protocol for our communication between Earth, the Moon, and Mars. 
+Based off this information and knowledge about protocols, we now worked together to find a common protocol for our communication between Earth, the Moon, and Mars. (see manual page for the protocol in this project.[link to Manual](Manual.md)
+
+### Step 3 Create an English to Binary System
+
+### Step 4 Create an English to Morse Ststem
 
 Evaluation
 ----------
 
-- Will be updated when the project is finished
-- all citation are in-text citation
+
 
