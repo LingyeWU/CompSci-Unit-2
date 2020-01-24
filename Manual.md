@@ -110,4 +110,4 @@ number in the protocol|Light State
 --|--
 1|OFF
 2|ON
-3| Space
+0| Space
