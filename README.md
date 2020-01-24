@@ -779,7 +779,7 @@ We began by learning about protocols used in technology today, furthering our ba
 | HTTP | Tim Berners-Lee | Used on worldwide web for anything clickable (hyperlinks, etc) | 
 | VPN | Gurdeep Singh-Pall  | Provides encrypted internet connections | 
 
-Based off this information and knowledge about protocols, we now worked together to find a common protocol for our communication between Earth, the Moon, and Mars. (see manual page for the protocol in this project.[link to Manual](Manual.md)
+Based off this information and knowledge about protocols, we now worked together to find a common protocol for our communication between Earth, the Moon, and Mars. (see manual page for the protocol in this project.[link to Manual](https://github.com/LingyeWU/CompSci-Unit-2/blob/master/Manual.md)
 
 ### Step 3 System flow diagram
 ![Diagram](img/fd1.jpg)
@@ -793,7 +793,7 @@ Based off this information and knowledge about protocols, we now worked together
 
 Explaination: Tuan and I were in charge of this part of the system. The idea is when the user input a string of numbers and letters, the system would be able to be presenting the message in binary code following the ASCII international principles where any of the 36 element including all English alphabet and 10 numbers is presented on 2 light bulbs in 8-digit sequence. The manual is that when the control light is off, do not read the other light; if the control light is on, read the other light (ON: 1; OFF:0); if both light sare off, put a space.
 
-- Full code can be accessed in here:[link to English to binary.c](/Code/English to binary.c)
+- Full code can be accessed in here:[link to English to binary.c](https://github.com/LingyeWU/CompSci-Unit-2/blob/master/Code/English%20to%20binary.c)
 
 - Identifying key stpes in coding:
 
@@ -850,7 +850,7 @@ Idea explained by Filip: So idea was to create case for every character in keybo
 
 Second part of the problem was how to send morse code with lights. Original protocl was made for use with simple printer so it's to fasr for our light system. We had 2 possible solutions.
 
-- Full code can be accessed in here:[link to English to binary.c](/Code/English to morse.c)
+- Full code can be accessed in here:[link to English to morse.c](https://github.com/LingyeWU/CompSci-Unit-2/blob/master/Code/English%20to%20morse.c)
 
 - Identifying key steps in coding:
 
@@ -871,7 +871,7 @@ for(i=0; i<text.length(); i++) {
 
 ### Step 6 Create a Morse to Binary System
 
-![Diagram](fd4.jpg)
+![Diagram](/img/fd4.jpg)
 
 [fig.19] This flow diagram shows how the entire system is designed to work.
 
@@ -903,7 +903,7 @@ void MtoB() {
    ```
 
 ### Step 7 Create a Binary to English System
-![Diagram](fd5.jpg)
+![Diagram](/img/fd5.jpg)
 
 [fig.19] This flow diagram shows how the entire system is designed to work.
 
@@ -1181,14 +1181,55 @@ void sentmorse(){
 
 Evaluation
 ----------
+1. Success criteria
 
+Success criteria | If met | Evidence
+---|---|---
+Communication between Earth and Mars uses Morse code.| YES | See video 1
+Communication between Mars and the Moon uses Binary code.|YES| See video 2
+Provide a communication system that allow stations to communicate seamlessly using English.| YES | See video 1 and 2
+Keyboard input on each station is limited to 2 push buttons. | YES | The system is desined based on 2 keys only
+100W lights are buzzers are available.| YES | See in all videos
+The output of the program(light bulbs), should be able to be identified and translated among residences clearly.| YES | See in all videos
+The program should be able to separate each language from each other.| YES| Manual input
+The program should be able to limit all its functionality within 2 buttons.|YES| All functionalities are desined into 2 buttons
+
+-[VIDEO 1](https://drive.google.com/open?id=1t6drf_LhwDHJ_7kWhGcIYvnmlZlNniQw)
+-[VIDEO 2](https://drive.google.com/open?id=1N0ppAdLT-Msuy6DMo38uvPxOd7if45Nq)
+
+##Also see the test of other funtionalities here:
+[TEST 1](https://drive.google.com/open?id=1foNOE6SuTGCrhmjI1fMeeStQO6ZQm0_F)
+[TEST 2](https://drive.google.com/open?id=1ENVzTCtF7SSiuMqnQ1Ur1VM5aNTFTugc)
+
+2. improvemnts
+
+#|What to improve|How to improve
+---|---|---
+1|The protocol difference between different groups| Need to communicate more efficiently between the groups to make sure each of the groups at least use the same amount of light bulbs.
+2| Better at quantilizing the time(delay seconds)| Need to figure out what is the problem when the tinkercard is put into an actual arduino
+3| Find the best way to read binary and morse| To test our differnet protocols and see which one is most effective and user friendly
+4| Lack of the final feasibility test| To learn the protocol from the otehr two group so we can do a feasibility test at night outside the classroom
 
 Appendix
 ----------
 
+1. All images in this file to be found [here](https://github.com/LingyeWU/CompSci-Unit-2/tree/master/img)
+1. All code relevant to this project to be found [here](https://github.com/LingyeWU/CompSci-Unit-2/tree/master/Code)
+1. The man page for this project to be found [here](https://github.com/LingyeWU/CompSci-Unit-2/blob/master/Manual.md)
+
 Citation
 ---------
+[1] “Switch...case.” Arduino Reference, www.arduino.cc/reference/en/language/structure/control-structure/switchcase/. Retrived (23 Dec 2020)
 
+[2] "What is Usability?" retreived from https://www.interaction-design.org/literature/topics/usability. Retrieved (25 Nov 2019)
+
+[3] Posner, Joe and Mars, Romam. "It's not you. Bad doors are everywhere." 2016. Retrieved (25 Nov 2019)
+
+[4] wikiHow Staff. "How to Count in Binary" retrieved from https://www.wikihow.com/Count-in-Binary. 2 Apr 2019. Retrieved (20 Nov 2019)
+
+[5] Raja, Dilip. "7 Segment Display Interfacing with Arduino" retrieved from https://circuitdigest.com/microcontroller-projects/7-segment-display-interfacing-with-arduino. 6 Jun 2015. Retrieved (20 Nov 2019)
+
+[6] "Logical Operators" retrieved from https://javascript.info/logical-operators. 15 Nov 2019. Retrieved (20 Nov 2019)
 
 
 
