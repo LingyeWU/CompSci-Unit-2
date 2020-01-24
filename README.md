@@ -112,10 +112,17 @@ Human-centered design is a creative approach to problem solving and the backbone
 
 - Output: All message will be transmistted via light bulbs, where one (or two) light bulbs are used for each residence as different stations to communicate. 
 
-### 4. Final draft of system diagram
 
-### 5. Test Plan
+### 4. Test Plan
 
+Test No|Test Data|Purpose|Expected result
+---|---|---|---
+1| HELLO| English to Binary| 01101000 01100101 01101100 01101100 01101111 00001010 
+2| HELLO| English to Morse| 1111 1 1211 1211 222
+3| 01101000 01100101 01101100 01101100 01101111 00001010 | Binary to English | HELLO
+4| 1111 1 1211 1211 222| Morse to binary | 01101000 01100101 01101100 01101100 01101111 00001010 
+
+### 5.  Flow diagrams(see in development)
 
 Development
 ----------
@@ -871,7 +878,7 @@ for(i=0; i<text.length(); i++) {
 
 ### Step 6 Create a Morse to Binary System
 
-![Diagram](/img/fd4.jpg)
+![Diagram](/img/fd4.png)
 
 [fig.19] This flow diagram shows how the entire system is designed to work.
 
@@ -903,7 +910,7 @@ void MtoB() {
    ```
 
 ### Step 7 Create a Binary to English System
-![Diagram](/img/fd5.jpg)
+![Diagram](/img/fd5.png)
 
 [fig.19] This flow diagram shows how the entire system is designed to work.
 
